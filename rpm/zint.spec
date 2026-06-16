@@ -26,6 +26,19 @@ Features of the library:
 - Output in the following file formats: PNG, GIF, EPS, WMF, BMP, TIF, SVG.
 - Verification stage for SBN, ISBN and ISBN-13 data.
 
+%if "%{?vendor}" == "chum"
+PackageName: BarWal
+Type: console-application
+DeveloperName: Robin Stuart
+Categories:
+ - Utility
+Custom:
+  Repo: https://github.com/zint/zint
+Icon: https://raw.githubusercontent.com/zint/zint/refs/heads/master/zint-qt.png
+Url:
+  Homepage: https://zint.org.uk/
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
